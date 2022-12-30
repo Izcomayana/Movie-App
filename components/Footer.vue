@@ -20,13 +20,6 @@
         <button>Subscribe Now</button>
       </div>
     </div>
-    <div class="second-container">
-      <div class="icons">
-        <p><img src="../assets/imgs/icon-facebook.svg" alt=""></p>
-        <p><img src="../assets/imgs/icon-twitter.svg" alt=""></p>
-      </div>
-      <p>&copy; Techkid</p>
-    </div>
   </footer>
 </template>
 
@@ -38,7 +31,7 @@ export default {
 
 <style lang="scss" scoped>
   footer {
-    background: black;
+    background: #000000;
     color: red;
     display: flex;
     flex-direction: column;
