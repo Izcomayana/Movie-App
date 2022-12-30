@@ -11,6 +11,24 @@
         <p class="movie-fact tagLine">
           <span>Tagline:</span> {{ movie.tagline }}
         </p>
+        <p class="movie-fact tagLine">
+          <span>Genres:</span>
+          <h v-for="genre in movie.genres" :key="genre">
+            {{ `${genre.name}, ` }}
+          </h>
+        </p>
+        <p class="movie-fact">
+          <span>Duration:</span> {{ movie.runtime }} minutes
+        </p>
+        <p class="movie-fact tagLine">
+          <span>Languages:</span>
+          <h v-for="language in movie.spoken_languages" :key="language">
+            {{ `${language.name},` }}
+          </h>
+        </p>
+        <p class="movie-fact">
+          <span>Overview:</span> {{ movie.overview }}
+        </p>
         <p class="movie-fact">
           <span>Released:</span> 
             {{
@@ -21,8 +39,26 @@
               })
             }}
         </p>
+        <p class="movie-fact tagLine">
+          <span>Country:</span>
+          <h v-for="country in movie.production_countries" :key="country">
+            {{ `${country.name},` }}
+          </h>
+        </p>
+        <p class="movie-fact tagLine">
+          <span>Production Companies:</span>
+          <h v-for="companies in movie.production_companies" :key="companies">
+            {{ `${companies.name},` }}
+          </h>
+        </p>
         <p class="movie-fact">
-          <span>Duration:</span> {{ movie.runtime }} minutes
+          <span>Budget:</span> 
+          {{
+            movie.budget.toLocaleString('en-us', {
+              style: 'currency',
+              currency: 'USD',
+            })
+          }}
         </p>
         <p class="movie-fact">
           <span>Revenue:</span> 
@@ -32,9 +68,6 @@
               currency: 'USD',
             })
           }}
-        </p>
-        <p class="movie-fact">
-          <span>Overview:</span> {{ movie.overview }}
         </p>
       </div>
     </div>
@@ -50,7 +83,7 @@
     name: 'single-movie',
     head () {
       return {
-        title: this.movie.title,
+        title: this.movie.title
       }
     },
     data () {
@@ -80,7 +113,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     padding: 32px 16px;
 
     .button {
@@ -116,11 +149,12 @@
         h1 {
           font-size: 35px;
           font-weight: 400;
+          margin-bottom: 2rem;
         }
 
         .movie-fact {
-          margin-top: 12px;
-          font-size: 15px;
+          margin-top: 1rem;
+          font-size: 1rem;
           line-height: 1.5;
 
           span {

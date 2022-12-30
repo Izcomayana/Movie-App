@@ -42,9 +42,10 @@ export default {
     color: red;
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
-    padding-bottom: 0;
+    padding: 4rem 0;
+    // padding-bottom: 0;
     font-size: 15px;
+    margin-top: 5rem;
 
     .first-container {
       display: flex;
@@ -56,14 +57,18 @@ export default {
       }
 
       p {
-        margin: 5px 0;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        cursor: pointer;
       }
 
       .netflix-logo {
         width: 10%;
+        margin-top: -2rem;
 
         @media (max-width: 750px) {
           width: 20%;
+          margin-bottom: 1.5rem;
         }
 
         img {
@@ -107,7 +112,7 @@ export default {
           flex-direction: row;
           justify-content: space-evenly;
           width: 75%;
-          margin-top: 15px;
+          margin-top: 1.5rem;
         }
 
         @media (max-width: 500px) {
@@ -120,8 +125,17 @@ export default {
           color: red;
           border: 1px solid red;
           border-radius: 5px;
-          padding: 7.5px;
+          padding: 10px;
+          width: 15rem;
           margin-bottom: 3px;
+
+          &:focus {
+            outline: none;
+          }
+
+          @media (max-width: 500px) {
+            width: 100%;
+          }
         }
 
         button {
@@ -131,6 +145,12 @@ export default {
           border-radius: 5px;
           padding: 7.5px;
           cursor: pointer;
+
+          &:hover {
+            background: transparent;
+            color: red;
+            border: 1px solid rgb(255, 0, 0);
+          }
         }
       }
     }
@@ -138,9 +158,9 @@ export default {
     .second-container {
       text-align: center;
       margin-bottom: 1rem;
+        margin-top: 3rem;
       
       @media (max-width: 750px) {
-        margin-top: 10px;
       }
 
       .icons {

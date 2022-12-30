@@ -154,11 +154,11 @@
     padding: 16px 8px;
 
     input {
-      max-width: 200px;
-      width: 100%;
-      padding: 6px;
-      font-size: 14px;
+      width: 12.5rem;
+      padding: 10px;
+      font-size: 1rem;
       border: none;
+      border-radius: 5px;
       &:focus {
         outline: none;
       }

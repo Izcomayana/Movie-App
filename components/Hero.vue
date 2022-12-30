@@ -22,10 +22,6 @@
     height: 350px;
     position: relative;
 
-    @media (min-width: 750px) {
-      height: 250px;
-    }
-
     &::after {
       content: '';
       position: absolute;
@@ -33,7 +29,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     img {
@@ -62,24 +58,24 @@
 
       .mini-heading {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 2rem;
         text-transform: uppercase;
         color: #c92502;
         margin-bottom: 8px;
 
         @media (min-width: 750px) {
-          font-size: 22px;
+          font-size: 4rem;
         }
       }
 
       h1 {
         color: #fff;
-        font-size: 40px;
+        font-size: 1rem;
         font-weight: 200;
-        margin-bottom: 8px;
+        margin-bottom: 1rem;
 
         @media (min-width: 750px) {
-          font-size: 65px;
+          font-size: 2rem;
         }
 
         span {
@@ -88,8 +84,13 @@
       }
 
       .button {
-        font-size: 15px;
+        font-size: 1rem;
         align-self: flex-start;
+        padding: 8px 12px;
+
+        @media (min-width: 750px) {
+          padding: 10px 20px;
+        }
       }
     
   }
