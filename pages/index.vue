@@ -84,12 +84,12 @@
     name: 'IndexPage',
     head () {
       return {
-        title: 'Movie App - Latest Streaming Movie Info',
+        title: 'Pre-Netflix',
         meta: [
           {
             hid: 'description',
             name: 'description',
-            content: 'Get all the Latest streamin movies in thearters & online',
+            content: 'Get all the Latest streaming movies in thearters & online',
           },
           {
             hid: 'keyword',
